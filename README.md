@@ -53,15 +53,15 @@ permission=new PermissionManager() {
         };
 ```        
         //To initiate checking permission
-	```
+```
         permission.checkAndRequestPermissions(this);
-	```
+```
 
 
 
 
 //To get Granted Permission and Denied Permission
-   ```
+```
 @Override
     public void onRequestPermissionsResult(int requestCode,String permissions[], int[] grantResults) {
         permission.checkResult(requestCode,permissions, grantResults);
@@ -69,4 +69,4 @@ permission=new PermissionManager() {
         ArrayList<String> granted=permission.getStatus().get(0).granted;
         ArrayList<String> denied=permission.getStatus().get(0).denied;
     }
-    ```
+```
