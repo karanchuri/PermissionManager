@@ -9,6 +9,7 @@ All the action performed after grant or deny can be customized by overriding met
 Custom permission can be checked insted of all permission in androidmanifests file.
 
 Setup:
+
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
