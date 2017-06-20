@@ -1,4 +1,6 @@
 # PermissionManager
+![ScreenShot](https://github.com/karanchuri/PermissionManager/blob/master/demo.gif?raw=true)
+
 
 This Library automatically search for permission in androidmanifests file and request for the same.
 Also if request is cancelled it shows a popup window with alert to grant permission.
