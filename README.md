@@ -9,6 +9,7 @@ Custom permission can be checked insted of all permission in androidmanifests fi
 //For Automatic Permission request.
 //It Dynamically search for apps permission and request for the same.
 //Below code in onCreate function
+```
 @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,18 +17,18 @@ Custom permission can be checked insted of all permission in androidmanifests fi
 	permission=new PermissionManager() {};
 	permission.checkAndRequestPermissions(this);
     }	
-
+```
 //Below code in onRequestPermissionsResult function
-
+```
 @Override
     public void onRequestPermissionsResult(int requestCode,String permissions[], int[] grantResults) {
         permission.checkResult(requestCode,permissions, grantResults);
     }
-
+```
 
 
 //Customization in Library
-
+```
 permission=new PermissionManager() {
             @Override
             public void ifCancelledAndCanRequest(Activity activity) {
@@ -50,16 +51,17 @@ permission=new PermissionManager() {
                 return customPermission;
             }
         };
-        
+```        
         //To initiate checking permission
+	```
         permission.checkAndRequestPermissions(this);
-
+	```
 
 
 
 
 //To get Granted Permission and Denied Permission
-
+   ```
 @Override
     public void onRequestPermissionsResult(int requestCode,String permissions[], int[] grantResults) {
         permission.checkResult(requestCode,permissions, grantResults);
@@ -67,3 +69,4 @@ permission=new PermissionManager() {
         ArrayList<String> granted=permission.getStatus().get(0).granted;
         ArrayList<String> denied=permission.getStatus().get(0).denied;
     }
+    ```
