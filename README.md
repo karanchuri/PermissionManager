@@ -8,6 +8,24 @@ If the app can no longer request permission due to "Don't ask again" on permissi
 All the action performed after grant or deny can be customized by overriding methode shown below.
 Custom permission can be checked insted of all permission in androidmanifests file.
 
+Setup:
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
+Step 2. Add the dependency
+
+	dependencies {
+	        compile 'com.github.karanchuri:PermissionManager:0.1.0'
+	}
+
+
+
 //For Automatic Permission request.
 //It Dynamically search for apps permission and request for the same.
 //Below code in onCreate function
