@@ -18,7 +18,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.karanchuri:PermissionManager:0.1.0'
+	        implementation 'com.github.karanchuri:PermissionManager:0.1.0'
 	}
 
 
@@ -28,6 +28,11 @@ Step 2. Add the dependency
 //It Dynamically search for apps permission and request for the same.
 
 //Below code in onCreate function.
+
+First Import below code:
+```
+import com.karan.churi.PermissionManager.PermissionManager;
+```
 
 ```
 @Override
